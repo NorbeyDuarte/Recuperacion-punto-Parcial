@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+plt.scatter(x,y)
+t=np.arange(0,150,0.01)
+z=20000/(1+19999*np.exp(-0.117*t))
+y=0.117*(z)*(1-(z/20000))
+plt.figure(figsize=(5,5))
+plt.plot(z,y)
+plt.axvline(10000)
+plt.plot(t,z)
+plt.axhline(10000,ls='--',Color='Yellow')
